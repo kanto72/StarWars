@@ -1,0 +1,815 @@
+/*Обнуление*/
+*{
+    padding: 0;
+    margin: 0;
+    font-family:'Roboto Condensed', sans-serif ;
+}
+/*Вся страничка*/
+body, html{
+    overflow-x: hidden;
+   
+}
+/*Отступы верхней части*/
+nav{
+    margin: 0 auto;
+    max-width: 1100px;
+    width: 100%;
+}
+/*Убераем чекбокс*/
+#checkbox-menu,
+.toggle{
+    display: none;
+}
+/*Выравниваем меню по линии вдоль*/
+.menu{
+    padding: 0;
+    margin: 0;
+    height: 50px;
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+/*Стилизация ссылки*/
+.menu li a{
+    color:#000;
+    text-decoration: none;
+    align-self: center;
+    font-size: 13px;
+    padding: 10px 15px;
+    transition: background .2s linear;
+}
+/*Ховер эфект*/
+.menu li a:hover{
+    background: #ffcc01;
+    border-radius: 3px;
+}
+/*Блок с классом Лого(который с лево)*/
+.menu li a.logo{
+    font-size:15px;
+    margin-right: 240px;
+}
+/*Блок контакты отступ*/
+.menu li a.contacts{
+    margin-right: 100px;
+}
+/*Блок wrapper Что бы выровнять все*/
+.wrapper{
+    margin: 0 auto;
+    max-width: 1100px;
+    width: 100%;
+}
+/*Контент и изображение перенесутся в право*/
+.intro{
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-end;
+}
+/*Выравнивание и добавление картинки главной*/
+.intro-img{
+    background-image:url(img/room.jpg);
+    width: 965px;
+    height: 640px;
+    background-repeat: no-repeat;
+}
+/*Текст на картинке*/
+.intro .intro-text{
+    position: absolute;
+    font-size: 60px;
+    right: 1006px;
+    top: 60px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/*Блок контакты стилизуем*/
+.intro-contacts{
+    background: #ffcc01;
+    max-width: 590px;
+    position: absolute;
+    right: 20px;
+    top: 715px;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 50px;
+}
+/*Стилизуем иконки в контактах*/
+.intro-contacts i{
+    color: #000;
+    margin-right:30px;
+}
+/*Стилизуем Текст внутри контакта*/
+.intro-contacts p{
+    font-size:18px;
+    margin-right:60px;
+}
+/*отступ от главного изображения*/
+.stats{
+    display:flex;
+    margin-top:130px;
+}
+/*Квадраты ппереместились в право*/
+.stats-line{
+    display:flex;
+}
+/*Текст*/
+.stats-text{
+    padding: 40px;
+}
+/*Заголовок второго уровня для текста*/
+.stats-text h2{
+    font-size:40px;
+    margin-bottom: 70px;
+}
+/*Редактируем текст*/
+.stats-text p{
+    margin-top:50px;
+    font-size: 13px;
+    line-height: 27px;
+}
+/*Стилизуем блоки Квадратов*/
+.square{
+    width:200px;
+    height:200px;
+    background-color:#f6f5f4;
+    margin:30px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+/*Внешний вид текста в Квадратах*/
+.stats-square{
+    font-size:40px;
+    color:#ffcc01;
+    margin-bottom:15px;
+}
+/*Текст в квадратах*/
+.square-text{
+    font-size: 14px;
+}
+/*Редактирую изображение Джедай левитирует*/
+.star{
+    margin-left: 5px;
+    width: 308px;
+    height: 379px;
+}
+/*Блок для картинок апартаментов*/
+.apartmens{
+    background: #f6f5f4;
+    padding: 60px 0;
+}
+/*Стилизуем заголовок*/
+.apart h2{
+    margin-bottom: 85px;
+    font-size: 40px;
+}
+/*Редактируем Карточки*/
+.card{
+    max-width: 348px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+/*Преобразовали немного карточку*/
+.card-container{
+    padding: 25px;
+}
+/*Ставим цену и информацию на свои места*/
+.card-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+/*Стилизуем блок Деньги*/
+.card-info .money{
+    font-size: 18px;
+    color:#ffcc01 ;
+}
+/*Сдвигаем иконки*/
+.card-info i{
+    margin-right: 8px;
+}
+/*Отступы от спана первого*/
+.card-info span:first-child{
+    margin-right: 18px;
+}
+/*Немного магии, Для всей карточки*/
+.card:hover{ 
+    background: #fafaf9;
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+/*Используем Грид, для ровнения Карточек между друг другу*/
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 30px;
+}
+/*Стилизуем Инпут(Поиск), добавляем изображение лупы*/
+.apart input[type=text]{
+    margin-top: 50px;
+    width: 300px;
+    height: 70px;
+    border: none;
+    background-image: url(img/search.png);
+    background-repeat: no-repeat;
+    background-position: 27px;
+    outline: none;
+    padding-left: 62px;
+    font-size: 15px;
+    color: #919eb1;
+    border-top-left-radius:4px;
+    border-bottom-left-radius: 4px;
+}
+/*Стилизуем и ровняем Кнопку рядом с поиском*/
+.apart input[type=submit]{
+    width: 115px;
+    border: none;
+    height: 70px;
+    background: #ffcc01;
+    font-size: 15px;
+    margin-left: -4px;
+    border-top-right-radius:4px;
+    border-bottom-right-radius: 4px;
+}
+/*Ниже Строки и кнопки поиска*/
+.all{
+    width: 250px;
+    height: 70px;
+    border: none;
+    border-radius: 4px;
+    margin-left: 40px;
+    margin-top: 52px;
+    font-size: 15px;
+}
+/*Расположение с права и с лево*/
+.buttons-search{
+    display: flex;
+}
+/*Заголовок*/
+.steps h2{
+    margin-top: 55px;
+    font-size: 40px;
+    margin-bottom: 35px;
+}
+/*Текст в блоке*/
+.steps-text{
+    line-height: 27px;
+    font-size: 13px;
+}
+/*Отодвигаем карточку от текста*/
+.mbtext{
+    margin-bottom: 70px;
+}
+/*Блок с текстом*/
+.stepblock{
+    width: 340px;
+    height: 370px;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+/*Ровняем номер в блоке*/
+.stepblock .step-num {
+    font-size: 200px;
+    position: relative;
+    top: -120px;
+    left: -30px;
+}
+/*Немного магии для замены цвета при наведении*/
+.stepblock:hover{
+    background: #ffcc01;
+    color: #fff;
+}
+/*Что бы стали блоки горизонтально а не вертикально с равными отступами*/
+.steps-container{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+/*Заголовок H4 нижний текст*/
+.stepblock h4{
+    font-style: 14px;
+    margin-left: 40px;
+    margin-top: -100px;
+    margin-bottom: 20px;
+}
+/*Цыфра 01 вверху*/
+.stepblock h4 span{
+    margin-right: 15px;
+}
+/*Информация в блоке*/
+.stepblock .step-info{
+    margin-left: 70px;
+    line-height: 29px;
+}
+/*Бордер черного цвета*/
+.stepblock .stepinfolast{
+    display: inline-block;
+    margin-left: 70px;
+    margin-top: 20px;
+    border-bottom: 3px solid #000;
+}
+/*Немного магии при наведении бордер меняет цвет, Ровняем с JS*/
+.stepblock .stepinfolast:hover{
+    border-bottom: 3px solid #000;
+}
+
+/*Распологаем блоки в две колонки Верхушку*/
+.serv-container {
+    display: flex;
+    margin-top: 70px;
+}
+/*Стилизуем изображение при изменении экрана меняет размер пропорционально в масштабах*/
+.services img{
+    width: 100%;
+    height: auto;
+}
+/*Ширина контейнера*/
+.serv-img-container {
+    width: 50%;
+}
+/*Ширина текста*/
+.serv-text {
+    width: 42%;
+    margin-left: 3%;
+}
+/*Отступ параграфов*/
+.serv-text p{
+    margin-bottom: 60px;
+}
+/*Стилизуем Заголовок*/
+.services h2{
+    font-style: 40px;
+    margin-bottom: 20px;
+}
+/*Редактируем параграф*/
+.services p{
+    font-size: 13px;
+    line-height: 30px;
+}
+/*Редактируем Заголовок*/
+.services h4{
+    font-style: 25px;
+    margin-bottom: 25px;
+}
+/*Секция Агент расположение */
+.agents {
+    background: #f6f5f4;
+    padding-top: 60px;
+    margin-top: 30px;
+}
+/*Заголовок в секции Агент*/
+.agents h2{
+    font-style: 40px;
+    margin-bottom: 20px;
+}
+/*Редактируем параграф*/
+.agents p{
+    font-size: 13px;
+    line-height: 30px;
+}
+/*Отступ для последнего параграфа, для третьего элемента*/
+.agents p:nth-child(3){
+    margin-bottom: 60px;
+}
+/*Распологаем отступы между блоками*/
+.agent-cards {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 95px;
+}
+/*Стилизуем блок*/
+.agent-card {
+    max-width: 254px;
+    background: #fff;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.4);
+}
+/*Немного магии при наведении на карточку Агента*/
+.agent-card:hover {
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.9);
+}
+/*Расположение агентов горизонтально*/
+.agent-block {
+    display: flex;
+    justify-content: space-between;
+}
+/*Добавляем отступы внутри блока*/
+.agent-info{
+    padding-top: 10px;
+    padding-left: 25px;
+}
+/*Имя агента*/
+.agent-name {
+    color: #ffcc01;
+}
+/*Редактируем иконки*/
+.social i{
+    margin-right: 32px;
+    position: relative;
+    top: 7px;
+    color: #000;
+}
+/*Немного магии при наведении на иконки соц сетей*/
+.social i:hover{
+    color: #ffcc01;
+}
+/*Последнюю иконку отступ не такой как у всех*/
+.social i:last-child{
+    margin-right: 18px;
+}
+/*Стилизация блока*/
+.add{
+    padding-bottom: 100px;
+    padding-top: 90px;
+}
+/*Распологаем все по местам*/
+.add-line{
+    display: flex;
+}
+/*Распологаем локации по своим местам*/
+.location{
+    font-size: 15px;
+    padding: 10px 89px 25px 55px;
+    background: #ffcc01;
+    display: inline-block;
+}
+/*Стилизация иконок Локации*/
+.location i{
+    margin-right: 30px;
+    font-size: 25px;
+    position: relative;
+    top: 7px;
+    color: #fff;
+}
+/*Расположение локации Мелборн*/
+.location-melbourn{
+    position: relative;
+    left: 0px;
+    bottom: 5px;
+}
+/*Расположении Локации Австралия*/
+.location-australia{
+    position: relative;
+    left: 0px;
+    bottom: 5px;
+}
+/*Редактируем расположение Заголовка*/
+.add-line h3{
+    font-size: 25px;
+    margin-top: 75px;
+    margin-bottom: 40px;
+    margin-left: 130px;
+}
+/*Редактируем параграф*/
+.add-line p{
+    font-size: 13px;
+    line-height: 30px;
+    margin-left: 130px;
+}
+/*Редактируем правый блок параграфа*/
+.add-line-right p{
+    margin-left: 0;
+    margin-right: 130px;
+}
+/*Нижний Заголовок встает на свои места*/
+.add-line h3:last-of-type{
+    margin-top: 25px;
+}
+/*Стилизуем и распологаем нашу кнопку Show*/
+.show-more{
+font-size: 18px;
+background: #1f373d;
+padding: 30px 70px 30px 55px;
+display: inline-block;
+margin-left: 130px;
+color: #fff;
+margin-top: 60px;
+}
+
+/*Стилизуем Footer блок*/
+footer{
+    background: #1f373d;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+/*Заголовок в блоке что бы все встало на свои места*/
+.footer-block{
+    display: flex;
+    justify-content: space-between;
+}
+/*Стилизуем заголовок*/
+.footer-block h3{
+    font-size: 48px;
+}
+/*Стилизуем  Search Инпут окно*/
+.footer-search input[type=text]{
+    width: 442px;
+    height: 70px;
+    color: #919eb1;
+    padding-left: 27px;
+    font-size: 15px;
+    /*background-image: url();/*Найти и добавить стрелочку*/
+    background-repeat: no-repeat;
+    background-position: 94%;
+}
+/*Стилизуем линию*/
+hr{
+    opacity: 0.3;
+    margin-top: 47px;
+    margin-bottom: 70px;
+}
+/*Распологаем все по своим местам*/
+.footer-links{
+    display: flex;
+    justify-content:space-between ;
+    padding-right: 90px;
+}
+/*Распологаем ссылки в колонку относительно названия*/
+.footer-link{
+    display: flex;
+    flex-direction: column;
+}
+/*Редактируем размер*/
+.footer-links-logo{
+    font-size:25px ;
+    margin-right: 26%;
+}
+/*Стилизуем параграф*/
+.footer-link p{
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #919eb1;
+    margin-bottom: 35px;
+}
+/*Стилизуем ссылки*/
+.footer-link a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+/*немного магии для наших ссылок при наведении будут менять свою прозрачность*/
+.footer-link a:hover{
+    opacity: 0.4;
+}
+
+
+
+
+
+/*Адаптация под мобилки*/
+@media screen and (max-width:765px) {
+    /*Стилизация бургер меню*/
+    .toggle{
+        clear:both;
+        display:block;
+        text-align: center;
+        font-size: 14px;
+        line-height: 40px;
+        width: 100%;
+        color:#000;
+        background: #ffcc01;
+        transition: all .1s linear;
+    }
+    /*Ховер эфект при наведении на бургер*/
+    .toggle:hover{
+        background: #d3a900;
+    }
+    /*Чекбокс меню*/
+    #checkbox-menu:checked + label .touch li{
+        opacity: 1;
+        visibility: visible;
+        transition: all .7s linear;
+    }
+    /*Высота открытия меню(при открытии)*/
+    #checkbox-menu:checked + label .touch {
+        height: 350px;
+    }
+    /*Стилизация меню которое открывается*/
+    .menu{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height:0px;
+        transition: height .3s linear;
+    }
+    /*li элементы нашего меню*/
+    .menu li{
+        display: flex;
+        align-self: center;
+        width: 95%;
+        opacity: 0;
+        visibility: hidden;
+    }
+    /*Стилизация ссылок в нутри меню*/
+    .menu li a{
+        width: 95%;
+        text-align: center;
+        align-self: center;
+        align-content: center;
+    }
+    /*Блок с классом Лого(который в самом вверху)*/
+    .menu li a.logo{
+        font-size:21px;
+        margin-right: 0px;
+    }
+    /*Выравниваем в адаптивной версии элемент Контакты*/
+    .menu li a.contacts{
+        margin-right: 0px;
+    }
+    /*Отступ между меню и картинкой*/
+    .intro{
+        margin-top: 0;
+        display:block;
+        max-width: 100%;
+    }
+    /*Стилизуем картинку что бы было симпотично*/
+    .intro-img{
+        background-position: bottom 100px right 456px;
+    }
+    /*Выравниваем текст на картинке и добавляем перемешение при открытии Меню*/
+    .intro .intro-text{
+        position: relative;
+        font-size: 25px;
+        right: -40px;
+        top:35px;
+    }
+    /*Что бы контакты так же двигались при открытии меню*/
+    .intro .intro-contacts{
+        right: 0;
+        top: -220px;
+        padding: 20px 10px;
+        position: relative;
+        padding-bottom: 73px;
+    }
+    /*Что бы иконки встали на свои места*/
+    .intro-contacts i{
+        margin-right: 10px;
+    }
+    /*Что бы текст так же встал на свои места*/
+    .intro-contacts p{
+        font-size: 15px;
+        margin-right: 0;
+        margin-top: 35px;
+    }
+    /*Ставим все в колонку*/
+    .stats{
+        margin-top:0;
+        flex-direction: column;
+    }
+    /*Текст*/
+    .stats-text{
+        margin-top: -180px;
+        padding: 10px;
+    }
+    /*Заголовок крупный*/
+    .stats-tex h2{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    /*Ровняем параграф*/
+    .stats-text p{
+        margin-top:5px;
+        font-size:13px;
+        line-height: 20px;
+    }
+    /*Преобразуем квадраты*/
+    .square{
+        height: 140px;
+    }
+    /*Расположение по вертикали Карточек*/
+    .cards{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-row-gap: 10px;
+        justify-items: center;
+    }
+    /*Стилизуем Инпут Текст*/
+    .apart input[type=text]{
+        margin-top: 20px;
+        width: 130px;
+    }
+    /*Распологаем в колонку Кнопку*/
+    .buttons-search{
+       flex-direction: column;
+       margin-left: 4%;
+    }
+    /*Кнопка на свое место становится*/
+    .all{
+        background: #fff;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    /*Ровняем в колонку по центру все блоки с анимацией*/
+    .steps-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    /*Отступы блоков*/
+    .stepblock{
+        margin-top: 20px;
+    }
+    /*ровняем текст и заголовк*/
+    .steps-text, .steps h2{
+        margin-left: 5%;
+        margin-bottom: 15px;
+    }
+    /*Ставим в колонку в один столбец*/
+    .serv-container{
+        margin-top: 20px;
+        flex-direction: column;
+    }
+    /*Изображение ставим на всю ширину экрана*/
+    .serv-img-container{
+        width: 100%;
+    }
+    /*Текст ставим на ширину экрана*/
+    .serv-text{
+        width: 100%;
+    }
+    /*Распологаем все в колонку*/
+    .agent-cards{
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+    }
+    /*Отступы между карточками*/
+    .agent-card{
+        margin-top: 10px;
+    }
+    /*Распологаем в колонку наш блок*/
+    .add-line{
+        margin-left: 0px;
+        flex-direction: column;
+    }
+    /*Расположение локаций*/
+    .location{
+        font-size: 15px;
+        padding: 10px 10px 20px 10px;
+        margin-top: 45px;
+        margin-left: -40px;
+    }
+    /*Расположении локации мелборн*/
+    .location-melbourn{
+        left: 100px;
+        bottom: 50px;
+    }
+    /*Расположении локации Австралия*/
+    .location-australia{
+        left: 100px;
+        bottom: 50px;
+    }
+    /*Распологаем заголовок*/
+    .add-line h3{
+        font-size: 25px;
+        margin-top: 75px;
+        margin-bottom: 40px;
+        margin-left: 5%;
+    }
+    /*Распологаем параграф*/
+    .add-line p{
+        margin-left: 5%;
+    }
+    /*Распологаем правый параграф*/
+    .add-line-right p{
+        margin-left: 5%;
+        margin-right: 0;
+    }
+    /*Расположении нашей кнопки Show*/
+    .show-more{
+        font-size: 15px;
+        padding: 20px 50px 20px 35px;
+        margin-left: 21%;
+        margin-top: 25px;
+    }
+    /*Становится все в одну колонку*/
+    .footer-block{
+        flex-direction: column;
+    }
+    /*Стилизуем заголовок*/
+    .footer-logo h3{
+        font-size: 35px;
+        text-align: center;
+    }
+    /*Стилизуем инпут*/
+    .footer-search input[type=text]{
+        width: 80%;
+        height: 50px;
+        margin-top: 15px;
+    }
+    /*Центрируем данный инпут*/
+    .footer-search{
+        display: flex;
+        justify-content: center;
+    }
+    /*Для перемешения блоков автоматически по линии*/
+    .footer-links{
+        flex-wrap: wrap;
+        margin-left: 5%;
+        padding-right: 5px;
+    }
+}
